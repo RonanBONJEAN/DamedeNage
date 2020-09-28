@@ -1,0 +1,15 @@
+.error {
+	color: #c8101e;
+	font-style: italic;
+	font-weight: bold;
+}
+
+h4{
+	font-weight: bold !important;
+}
+.tablehead{
+	font-style : italic !important;
+	font-weight: bold !important;
+	background-color: #c8101e !important;
+}
+
