@@ -81,7 +81,7 @@
 				</div>
 				<div style="background-color: white;border-style:inset;border-color:black;  border-bottom-left-radius: 10px;border-bottom-right-radius: 10px; border-top: none; padding-bottom:10px">
 					<p  style="font-size: 1px"><br/></p>
-					<h4 style=" margin: 15px; margin-bottom: 15px">Surune embarcation à rames, la dame de nage est un objet
+					<h4 style=" margin: 15px; margin-bottom: 15px">Sur une embarcation à rames, la dame de nage est un objet
 						servant à fixer une rame. Durant le mouvement du rameur, elle joue
 						le rôle de pivot et transfère à l'embarcation la réaction créée
 						par le coup de rame. Les dames de nage sont généralement en forme de
