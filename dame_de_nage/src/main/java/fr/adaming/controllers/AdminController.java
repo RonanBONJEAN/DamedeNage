@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import antlr.collections.impl.LList;
 import fr.adaming.model.Boissons;
 import fr.adaming.model.Horraires;
 import fr.adaming.model.Plats;
@@ -358,6 +357,18 @@ public class AdminController {
 		}
 		if (vin.getAppelation().contains("Ã")) {
 			vin.setAppelation(vin.getAppelation().replaceAll("Ã", "à"));
+		}
+		if(!"-".equals(vin.getPrix25())){
+			vin.setPrix25(vin.getPrix25()+"€");
+		}
+		if(!"-".equals(vin.getPrix50())){
+			vin.setPrix50(vin.getPrix50()+"€");
+		}
+		if(!"-".equals(vin.getPrixv())){
+			vin.setPrixv(vin.getPrixv()+"€");
+		}
+		if(!"-".equals(vin.getPrixb())){
+			vin.setPrixb(vin.getPrixb()+"€");
 		}
 		boolean isAdd = vSer.addVins(vin);
 		if (isAdd) {

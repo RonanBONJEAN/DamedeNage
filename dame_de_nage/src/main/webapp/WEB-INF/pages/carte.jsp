@@ -58,7 +58,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom}</td>
-											<td style="text-align: left; font-size: 75%">${p.prixm}0</td>
+											<td style="text-align: left; font-size: 75%">${p.prixm}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -90,8 +90,8 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom}</td>
-											<td style="text-align: center; font-size: 75%">${p.prixp}0</td>
-											<td style="text-align: center; font-size: 75%">${p.prixg}0</td>
+											<td style="text-align: center; font-size: 75%">${p.prixp}0€</td>
+											<td style="text-align: center; font-size: 75%">${p.prixg}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -123,8 +123,8 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom}</td>
-											<td style="text-align: center;font-size: 75%">${p.prixp}0</td>
-											<td style="text-align: center; font-size: 75%">${p.prixg}0</td>
+											<td style="text-align: center;font-size: 75%">${p.prixp}0€</td>
+											<td style="text-align: center; font-size: 75%">${p.prixg}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -155,7 +155,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom}</td>
-											<td style="text-align: left; font-size: 75%">${p.prixm}0</td>
+											<td style="text-align: left; font-size: 75%">${p.prixm}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -186,7 +186,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom}</td>
-											<td style="text-align: left; font-size: 75%">${p.prixm}0</td>
+											<td style="text-align: left; font-size: 75%">${p.prixm}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -216,7 +216,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom}</td>
-											<td style="text-align: left; font-size: 75%">${p.prixm}0</td>
+											<td style="text-align: left; font-size: 75%">${p.prixm}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -247,7 +247,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom}</td>
-											<td style="text-align: left; font-size: 75%">${p.prixm}0</td>
+											<td style="text-align: left; font-size: 75%">${p.prixm}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -279,7 +279,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%;">${p.nom}</td>
-											<td style="text-align: left; font-size: 75%"><br>${p.prixm}0</td>
+											<td style="text-align: left; font-size: 75%"><br>${p.prixm}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -310,7 +310,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%;">${p.nom}</td>
-											<td style="text-align: left; font-size: 75%">${p.prixm}0</td>
+											<td style="text-align: left; font-size: 75%">${p.prixm}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -345,7 +345,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom}</td>
-											<td style="text-align: left; font-size: 75%">${p.prixm}0</td>
+											<td style="text-align: left; font-size: 75%">${p.prixm}0€</td>
 										</tr>
 
 									</c:forEach>
@@ -372,7 +372,7 @@
 
 										<tr>
 											<td style="text-align: center; width: 65%">${p.nom} </td>
-											<td style="text-align: left; font-size: 75%">${p.prixm} </td>
+											<td style="text-align: left; font-size: 75%">${p.prixm}€ </td>
 										</tr>
 
 									</c:forEach>
@@ -403,11 +403,11 @@
 								
 								<tr>
 								<c:forEach var="p" items="${listePrixGlace}">
-									<td style="text-align: center; font-size: 140%">${p.prixp}</td>
-									<td style="text-align: center; font-size: 140%">${p.prixm}</td>
-									<td style="text-align: center; font-size: 140%">${p.prixg}</td>
+									<td style="text-align: center; font-size: 140%">${p.prixp}€</td>
+									<td style="text-align: center; font-size: 140%">${p.prixm}€</td>
+									<td style="text-align: center; font-size: 140%">${p.prixg}€</td>
 								</c:forEach>
-									<td style="text-align: center; font-size: 140%">1.00</td>
+									<td style="text-align: center; font-size: 140%">1.00€</td>
 								</tr>
 								</tbody>
 							</table>
@@ -422,7 +422,7 @@
 
 										<tr>
 										<td></td>
-											<td style="text-align: center">${p.nom} </td>
+											<td style="text-align: center">${p.nom}€ </td>
 											<td></td>
 											<td></td>
 										</tr>
@@ -540,6 +540,320 @@
 											<td style="text-align: center; font-size: 75%">${v.prix25} </td>
 											<td style="text-align: center; font-size: 75%">${v.prix50} </td>
 											<td style="text-align: center; font-size: 75%">${v.prixb} </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="margin-top: 12px; border-style: inset; border-color: black; border-bottom: none">
+					<br />
+					<h1 style="text-align: center; font-size: 300%">Les Boissons</h1>
+					<h1 style="text-align: center">
+						<img style="width: 20%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h1>
+					<h1 style="text-align: center">Les Bierres pression</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5">
+								<tr>
+									<td style="text-align: center; width: 43%"></td>
+									<td style="text-align: center; font-size: 140%">25cl</td>
+									<td style="text-align: center; font-size: 140%">50cl</td>
+								</tr>
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeBierreP}">
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom}</td>
+											
+												<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+												<td style="text-align: center; font-size: 75%">${b.prixg}€ </td>
+										</tr>
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Bierres bouteilles</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeBierreB}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Apéritifs</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeApero}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Champagnes</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeChamp}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Whiskies</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeWhiskie}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Bourbons</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeBourbon}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Rhums</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeRhum}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Digestifs</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeDigeo}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Sans alcool</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeSA}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				.<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Eaux</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+							<tr>
+									<td style="text-align: center; width: 43%"></td>
+									<td style="text-align: center; font-size: 140%">50cl</td>
+									<td style="text-align: center; font-size: 140%">1L</td>
+								</tr>
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeEau}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
+											<td style="text-align: center; font-size: 75%">${b.prixg}€ </td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Boissons chaudes</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeBoissonChaude}">
+
+										<tr>
+											<td style="text-align: center; width: 43%">${b.nom} </td>
+											<td style="text-align: center; font-size: 75%">${b.prixp}€ </td>
 										</tr>
 
 									</c:forEach>

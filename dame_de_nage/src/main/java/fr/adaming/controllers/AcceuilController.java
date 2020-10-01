@@ -76,6 +76,7 @@ public class AcceuilController {
 		List<Boissons> listeDigeo = new ArrayList<Boissons>();
 		List<Boissons> listeSA = new ArrayList<Boissons>();
 		List<Boissons> listeBoissonChaude = new ArrayList<Boissons>();
+		List<Boissons> listeEau = new ArrayList<Boissons>();
 		for (Boissons b : listeBoisson) {
 			if (b.getCategorie().equalsIgnoreCase("Bierres pression")) {
 				listeBierreP.add(b);
@@ -97,6 +98,8 @@ public class AcceuilController {
 				listeSA.add(b);
 			} else if (b.getCategorie().equalsIgnoreCase("Boissons Chaudes")) {
 				listeBoissonChaude.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Eaux")) {
+				listeEau.add(b);
 			}
 
 		}
@@ -161,7 +164,17 @@ public class AcceuilController {
 				put("listeCoupeSA", listeCoupeSA);
 				put("listeCoupeAA", listeCoupeAA);
 				put("listePrixGlace", listePrixGlace);
-				put("listeME", listeME);
+				put("listeBierreP", listeBierreP);
+				put("listeBierreB", listeBierreB);
+				put("listeApero", listeApero);
+				put("listeChamp", listeChamp);
+				put("listeWhiskie", listeWhiskie);
+				put("listeBourbon", listeBourbon);
+				put("listeRhum", listeRhum);
+				put("listeDigeo", listeDigeo);
+				put("listeSA", listeSA);
+				put("listeBoissonChaude", listeBoissonChaude);
+				put("listeEau", listeEau);
 			}
 		};
 		mv.addAllObjects(map);

@@ -9,7 +9,6 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 
 import fr.adaming.model.Boissons;
-import fr.adaming.model.Vins;
 
 @Repository
 public class BoissonsDaoImpl implements IBoissonsDao {
