@@ -16,9 +16,11 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import antlr.collections.impl.LList;
+import fr.adaming.model.Boissons;
 import fr.adaming.model.Horraires;
 import fr.adaming.model.Plats;
 import fr.adaming.model.Vins;
+import fr.adaming.service.IBoissonsService;
 import fr.adaming.service.IHorrairesService;
 import fr.adaming.service.IPlatsService;
 import fr.adaming.service.IVinsService;
@@ -37,6 +39,9 @@ public class AdminController {
 	@Autowired
 	private IHorrairesService hSer;
 	
+	@Autowired
+	private IBoissonsService bSer;
+	
 	private double prixpGlace;
 	private double prixmGlace;
 	private double prixgGlace;
@@ -53,8 +58,10 @@ public class AdminController {
 		ModelAndView mv = new ModelAndView();
 		Plats plat = new Plats();
 		Vins vin = new Vins();
+		Boissons boisson = new Boissons();
 		List<Plats> listeP = pSer.getAllPlats();
 		List<Vins> listeV = vSer.getAllVins();
+		List<Boissons> listeBoisson = bSer.getAllBoissons();
 		List<Plats> listeTapas = new ArrayList<Plats>();
 		List<Plats> listePlancha = new ArrayList<Plats>();
 		List<Plats> listeHuitre = new ArrayList<Plats>();
@@ -71,7 +78,40 @@ public class AdminController {
 		List<Vins> listeVinsRouge = new ArrayList<Vins>();
 		List<Vins> listeVinsBlanc = new ArrayList<Vins>();
 		List<Vins> listeVinsRose = new ArrayList<Vins>();
-		
+		List<Boissons> listeBierreP = new ArrayList<Boissons>();
+		List<Boissons> listeBierreB = new ArrayList<Boissons>();
+		List<Boissons> listeApero = new ArrayList<Boissons>();
+		List<Boissons> listeChamp = new ArrayList<Boissons>();
+		List<Boissons> listeWhiskie = new ArrayList<Boissons>();
+		List<Boissons> listeBourbon = new ArrayList<Boissons>();
+		List<Boissons> listeRhum = new ArrayList<Boissons>();
+		List<Boissons> listeDigeo = new ArrayList<Boissons>();
+		List<Boissons> listeSA = new ArrayList<Boissons>();
+		List<Boissons> listeBoissonChaude = new ArrayList<Boissons>();
+		for (Boissons b : listeBoisson) {
+			if (b.getCategorie().equalsIgnoreCase("Bierres pression")) {
+				listeBierreP.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Bierres bouteille")) {
+				listeBierreB.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("aperitifs")) {
+				listeApero.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Champagne")) {
+				listeChamp.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Whiskies")) {
+				listeWhiskie.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Bourbons")) {
+				listeBourbon.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Rhums")) {
+				listeRhum.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Digestifs")) {
+				listeDigeo.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Sans Alcool")) {
+				listeSA.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Boissons Chaudes")) {
+				listeBoissonChaude.add(b);
+			}
+
+		}
 		for (Plats p : listeP) {
 			if (p.getCategorie().equalsIgnoreCase("tapas")) {
 				listeTapas.add(p);
@@ -137,6 +177,7 @@ public class AdminController {
 		mv.addAllObjects(map);
 		mv.addObject(plat);
 		mv.addObject(vin);
+		mv.addObject(boisson);
 		mv.setViewName("carteAdmin");
 		return mv;
 	}
@@ -274,7 +315,7 @@ public class AdminController {
 					p.setPrixg(plat.getPrixg());
 					p.setPrixm(plat.getPrixm());
 					p.setPrixp(plat.getPrixp());
-					isud = pSer.upDatePlats(plat);
+					isud = pSer.upDatePlats(p);
 				}
 			}
 		} else{

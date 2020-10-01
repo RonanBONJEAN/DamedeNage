@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import fr.adaming.model.Boissons;
 import fr.adaming.model.Horraires;
 import fr.adaming.model.Plats;
 import fr.adaming.model.Vins;
+import fr.adaming.service.IBoissonsService;
 import fr.adaming.service.IHorrairesService;
 import fr.adaming.service.IPlatsService;
 import fr.adaming.service.IVinsService;
@@ -32,6 +34,9 @@ public class AcceuilController {
 
 	@Autowired
 	private IHorrairesService hSer;
+	
+	@Autowired
+	private IBoissonsService bSer;
 
 	@RequestMapping(value = "/acceuil", method = RequestMethod.GET)
 	public ModelAndView afficheAcceuil() {
@@ -44,6 +49,7 @@ public class AcceuilController {
 		ModelAndView mv = new ModelAndView();
 		List<Plats> listeP = pSer.getAllPlats();
 		List<Vins> listeV = vSer.getAllVins();
+		List<Boissons> listeBoisson = bSer.getAllBoissons();
 		List<Plats> listeTapas = new ArrayList<Plats>();
 		List<Plats> listePlancha = new ArrayList<Plats>();
 		List<Plats> listeHuitre = new ArrayList<Plats>();
@@ -60,7 +66,40 @@ public class AcceuilController {
 		List<Vins> listeVinsRouge = new ArrayList<Vins>();
 		List<Vins> listeVinsBlanc = new ArrayList<Vins>();
 		List<Vins> listeVinsRose = new ArrayList<Vins>();
+		List<Boissons> listeBierreP = new ArrayList<Boissons>();
+		List<Boissons> listeBierreB = new ArrayList<Boissons>();
+		List<Boissons> listeApero = new ArrayList<Boissons>();
+		List<Boissons> listeChamp = new ArrayList<Boissons>();
+		List<Boissons> listeWhiskie = new ArrayList<Boissons>();
+		List<Boissons> listeBourbon = new ArrayList<Boissons>();
+		List<Boissons> listeRhum = new ArrayList<Boissons>();
+		List<Boissons> listeDigeo = new ArrayList<Boissons>();
+		List<Boissons> listeSA = new ArrayList<Boissons>();
+		List<Boissons> listeBoissonChaude = new ArrayList<Boissons>();
+		for (Boissons b : listeBoisson) {
+			if (b.getCategorie().equalsIgnoreCase("Bierres pression")) {
+				listeBierreP.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Bierres bouteille")) {
+				listeBierreB.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("aperitifs")) {
+				listeApero.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Champagne")) {
+				listeChamp.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Whiskies")) {
+				listeWhiskie.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Bourbons")) {
+				listeBourbon.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Rhums")) {
+				listeRhum.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Digestifs")) {
+				listeDigeo.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Sans Alcool")) {
+				listeSA.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Boissons Chaudes")) {
+				listeBoissonChaude.add(b);
+			}
 
+		}
 		for (Plats p : listeP) {
 			if (p.getCategorie().equalsIgnoreCase("tapas")) {
 				listeTapas.add(p);
@@ -90,6 +129,7 @@ public class AcceuilController {
 			
 
 		}
+		
 		listePrixGlace.add(listeGlace.get(0));
 		for (Vins v : listeV) {
 			if (v.getType().equalsIgnoreCase("Rouge")) {
