@@ -77,7 +77,7 @@
 									placeholder="Cat" path="categorie" required="required" />
 							</div>
 						</div>
-						
+
 					</div>
 					<div class="modal-footer">
 						<div class="form-group" style="margin-right: 10px">
@@ -217,8 +217,9 @@
 						<div class="form-group" style="display: none">
 							<label for="idCatPlancha" class="col-sm-2 control-label">Cat</label>
 							<div class="col-sm-3">
-								<form:input type="text" cssClass="form-control" id="idCatPlancha"
-									placeholder="Cat" path="categorie" required="required" />
+								<form:input type="text" cssClass="form-control"
+									id="idCatPlancha" placeholder="Cat" path="categorie"
+									required="required" />
 							</div>
 						</div>
 					</div>
@@ -367,7 +368,7 @@
 							<label for="idCatSalade" class="col-sm-2 control-label">Cat</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control" id="idCatSalade"
-									 path="categorie" required="required" />
+									path="categorie" required="required" />
 							</div>
 						</div>
 					</div>
@@ -496,7 +497,7 @@
 							<label for="idCatGlaces" class="col-sm-2 control-label">Cat</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control" id="idCatGlaces"
-									 path="categorie" required="required" />
+									path="categorie" required="required" />
 							</div>
 						</div>
 					</div>
@@ -540,12 +541,12 @@
 						</div>
 					</div>
 					<div class="form-group" style="display: none">
-							<label for="idCatGlaces" class="col-sm-2 control-label">Cat</label>
-							<div class="col-sm-3">
-								<form:input type="text" cssClass="form-control" id="idCatGlaces" value = "Glace"
-									 path="categorie" required="required" />
-							</div>
+						<label for="idCatGlaces" class="col-sm-2 control-label">Cat</label>
+						<div class="col-sm-3">
+							<form:input type="text" cssClass="form-control" id="idCatGlaces"
+								value="Glace" path="categorie" required="required" />
 						</div>
+					</div>
 					<div class="modal-footer">
 						<div class="form-group" style="margin-right: 10px">
 
@@ -561,8 +562,8 @@
 		</div>
 	</div>
 	<!-- Modal Prix Glaces -->
-	<div class="modal fade" id="ModalPrixGlace" tabindex="-1"
-		role="dialog" aria-labelledby="ModalPrixGlaces" aria-hidden="true">
+	<div class="modal fade" id="ModalPrixGlace" tabindex="-1" role="dialog"
+		aria-labelledby="ModalPrixGlaces" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -612,15 +613,16 @@
 									required="required" />
 							</div>
 						</div>
-						
+
 					</div>
 					<div class="form-group" style="display: none">
-							<label for="idCatPrixGlaces" class="col-sm-2 control-label">Cat</label>
-							<div class="col-sm-3">
-								<form:input type="text" cssClass="form-control" id="idCatPrixGlaces" value = "Glace"
-									 path="categorie" required="required" />
-							</div>
+						<label for="idCatPrixGlaces" class="col-sm-2 control-label">Cat</label>
+						<div class="col-sm-3">
+							<form:input type="text" cssClass="form-control"
+								id="idCatPrixGlaces" value="Glace" path="categorie"
+								required="required" />
 						</div>
+					</div>
 					<div class="modal-footer">
 						<div class="form-group" style="margin-right: 10px">
 
@@ -754,7 +756,7 @@
 							<label for="idPrixVVins" class="col-sm-2 control-label">Prix
 								au verre</label>
 							<div class="col-sm-3">
-								<form:input type="text" cssClass="form-control" id="idPrixVVins"
+								<form:input type="text" cssClass="form-control"
 									placeholder="Prix" path="prixv" required="required" />
 							</div>
 						</div>
@@ -763,8 +765,7 @@
 								pichet 25cl</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control"
-									id="idPrix25Vins" placeholder="Prix" path="prix25"
-									required="required" />
+									placeholder="Prix" path="prix25" required="required" />
 							</div>
 						</div>
 						<div class="form-group">
@@ -772,15 +773,14 @@
 								pichet 50cl</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control"
-									id="idPrixVins50" placeholder="Prix" path="prix50"
-									required="required" />
+									placeholder="Prix" path="prix50" required="required" />
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="idPrixBVins" class="col-sm-2 control-label">Prix
 								à la bouteille</label>
 							<div class="col-sm-3">
-								<form:input type="text" cssClass="form-control" id="idPrixBVins"
+								<form:input type="text" cssClass="form-control"
 									placeholder="Prix" path="prixb" required="required" />
 							</div>
 						</div>
@@ -791,6 +791,164 @@
 									<form:option value="Rouge" />
 									<form:option value="Blanc" />
 									<form:option value="Rosé" />
+								</form:select>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="form-group" style="margin-right: 10px">
+
+							<input type="submit" value="Ajouter" class="btn btn-secondary"
+								style="background-color: #c8101e; color: white" />
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Fermer</button>
+
+						</div>
+					</div>
+				</form:form>
+			</div>
+		</div>
+	</div>
+	<!-- Modal Boissons -->
+	<div class="modal fade" id="ModalBoissons" tabindex="-1" role="dialog"
+		aria-labelledby="ModalBoissons" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ModalBoissonsTitle">Modification
+						des Vins</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form:form method="POST" action="submitUpDateB"
+					modelAttribute="boissons" cssClass="form-horizontal">
+
+					<div class="modal-body">
+						<div class="form-group" style="display: none">
+							<label for="idBoissons" class="col-sm-2 control-label">ID</label>
+							<div class="col-sm-3">
+								<form:input type="text" cssClass="form-control" id="idBoissons"
+									placeholder="Nom" path="id" required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="idNomBoissons" class="col-sm-2 control-label">Nom</label>
+							<div class="col-sm-6">
+								<form:input type="text" cssClass="form-control"
+									id="idNomBoissons" placeholder="Nom" path="nom"
+									required="required" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="idPrixPBoisson" class="col-sm-2 control-label">Prix
+								25cl</label>
+							<div class="col-sm-3">
+								<form:input type="text" cssClass="form-control"
+									id="idPrixPBoissons" placeholder="Prix" path="prixb"
+									required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="idPrixGBoissons" class="col-sm-2 control-label">Prix
+								50cl</label>
+							<div class="col-sm-3">
+								<form:input type="text" cssClass="form-control"
+									id="idPrixGBoissons" placeholder="Prix" path="prixg"
+									required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="idCatBoisson" class="col-sm-2 control-label">Categorie</label>
+							<div class="col-sm-3" id="idCatBoisson">
+								<form:select path="categorie">
+									<form:option value="Bierres pressions" />
+									<form:option value="Bierres bouteille" />
+									<form:option value="Aperitif" />
+									<form:option value="Champagne" />
+									<form:option value="Whiskie" />
+									<form:option value="Bourbon" />
+									<form:option value="Rhum" />
+									<form:option value="Digestif" />
+									<form:option value="Sans Alcool" />
+									<form:option value="Eau" />
+									<form:option value="Boisson Chaude" />
+								</form:select>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="form-group" style="margin-right: 10px">
+
+							<input type="submit" value="Modifier" class="btn btn-secondary"
+								style="background-color: #c8101e; color: white" />
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Fermer</button>
+
+						</div>
+					</div>
+				</form:form>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="ModalAjoutBoissons" tabindex="-1"
+		role="dialog" aria-labelledby="ModalAjoutBoissons" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h1 class="modal-title" id="ModalAjoutBoissonsTitle">Ajout
+						d'un Vins</h1>
+				</div>
+				<form:form method="POST" action="submitAddB"
+					modelAttribute="boissons" cssClass="form-horizontal">
+
+					<div class="modal-body">
+
+						<div class="form-group">
+							<label for="idNomBoisson" class="col-sm-2 control-label">Nom</label>
+							<div class="col-sm-3">
+								<form:input type="text" cssClass="form-control"
+									id="idNomBoisson" placeholder="Nom" path="nom"
+									required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="idPrixPBoisson" class="col-sm-2 control-label">Prix
+								25cl</label>
+							<div class="col-sm-3">
+								<form:input type="text" cssClass="form-control"
+									placeholder="Prix" path="prixp" required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="idPrixGBoisson" class="col-sm-2 control-label">Prix
+								50cl</label>
+							<div class="col-sm-3">
+								<form:input type="text" cssClass="form-control"
+									placeholder="Prix" path="prixg" required="required" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="idCatBoisson" class="col-sm-2 control-label">Categorie</label>
+							<div class="col-sm-3" id="idCatBoisson">
+								<form:select path="categorie">
+									<form:option value="Bierres pressions" />
+									<form:option value="Bierres bouteille" />
+									<form:option value="Aperitif" />
+									<form:option value="Champagne" />
+									<form:option value="Whiskie" />
+									<form:option value="Bourbon" />
+									<form:option value="Rhum" />
+									<form:option value="Digestif" />
+									<form:option value="Sans Alcool" />
+									<form:option value="Eau" />
+									<form:option value="Boisson Chaude" />
 								</form:select>
 							</div>
 						</div>

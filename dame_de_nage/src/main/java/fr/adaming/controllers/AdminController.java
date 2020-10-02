@@ -429,7 +429,95 @@ public class AdminController {
 			return "redirect:/admin/carte";
 		}
 	}
+	@RequestMapping(value = "/submitAddB", method = RequestMethod.POST)
+	public String addBoissonpost(@ModelAttribute Boissons boisson, RedirectAttributes ra) {
+		if (boisson.getNom().contains("Ã©")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã©", "é"));
+		}
+		if (boisson.getNom().contains("Ã¨")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã¨", "è"));
+		}
+		if (boisson.getNom().contains("Ãª")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ãª", "ê"));
+		}
+		if (boisson.getNom().contains("Ã´")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã´", "ô"));
+		}
+		if (boisson.getNom().contains("Ã«")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã«", "ë"));
+		}
+		if (boisson.getNom().contains("Ã¯")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã¯", "ï"));
+		}
+		if (boisson.getNom().contains("Ã¢")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã¢", "â"));
+		}
+		if (boisson.getNom().contains("Ã§")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã§", "ç"));
+		}
+		if (boisson.getNom().contains("Ã")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã", "à"));
+		}
+		
+		boolean isAdd = bSer.addBoissons(boisson);
+		if (isAdd) {
+			return "redirect:/admin/carte";
+		} else {
+			ra.addAttribute("msg", "l'ajout à fail");
+			return "redirect:/admin/carte";
+		}
+	}
 
+	@RequestMapping(value = "/submitDeleteB/{vId}", method = RequestMethod.GET)
+	public String deleteBoissonpost(@PathVariable("bId") int id, RedirectAttributes ra) {
+		Boissons boisson = new Boissons(id);
+		boolean isdel = bSer.deleteBoissons(boisson);
+		if (isdel) {
+
+			return "redirect:/admin/carte";
+		} else {
+			ra.addAttribute("msg", "la suppression à fail");
+			return "redirect:/admin/carte";
+		}
+	}
+
+	@RequestMapping(value = "/submitUpDateB", method = RequestMethod.POST)
+	public String upDateBoissonpost(@ModelAttribute Boissons boisson, RedirectAttributes ra) {
+		if (boisson.getNom().contains("Ã©")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã©", "é"));
+		}
+		if (boisson.getNom().contains("Ã¨")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã¨", "è"));
+		}
+		if (boisson.getNom().contains("Ãª")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ãª", "ê"));
+		}
+		if (boisson.getNom().contains("Ã´")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã´", "ô"));
+		}
+		if (boisson.getNom().contains("Ã«")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã«", "ë"));
+		}
+		if (boisson.getNom().contains("Ã¯")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã¯", "ï"));
+		}
+		if (boisson.getNom().contains("Ã¢")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã¢", "â"));
+		}
+		if (boisson.getNom().contains("Ã§")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã§", "ç"));
+		}
+		if (boisson.getNom().contains("Ã")) {
+			boisson.setNom(boisson.getNom().replaceAll("Ã", "à"));
+		}
+		boolean isud = bSer.upDateBoissons(boisson);
+		if (isud) {
+			return "redirect:/admin/carte";
+		} else {
+			ra.addAttribute("msg", "la modification à fail");
+			return "redirect:/admin/carte";
+		}
+	}
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
 	public String logout(RedirectAttributes ra) {
 		return "acceuil";

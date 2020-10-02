@@ -60,7 +60,7 @@
 								<tbody
 									style="width: 100%; background-color: #e5e5e5; font-size: 200%;">
 									<c:forEach var="p" items="${listeTapas}">
-										
+
 										<tr>
 											<td style="text-align: center; width: 65%"><a
 												style="color: black" data-toggle="modal" href="#ModalTapas"
@@ -203,7 +203,7 @@
 								<tbody
 									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
 									<c:forEach var="p" items="${listeHuitre}">
-										
+
 										<tr>
 											<td style="text-align: center; width: 65%"><a
 												style="color: black" data-toggle="modal" href="#ModalPlats"
@@ -246,7 +246,7 @@
 								<tbody
 									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
 									<c:forEach var="p" items="${listePlats}">
-										
+
 										<tr>
 											<td style="text-align: center; width: 65%"><a
 												style="color: black" data-toggle="modal" href="#ModalPlats"
@@ -428,16 +428,16 @@
 				<div class="col-sm-12"
 					style="border-style: inset; border-color: black; border-top: none; border-bottom: none">
 					<br />
-					<h1 style="text-align: center">
-						Les Glaces 
-					</h1>
+					<h1 style="text-align: center">Les Glaces</h1>
 					<h1 style="text-align: center">
 						<img style="width: 15%"
 							src="${pageContext.request.contextPath}/resources/images/underline.png">
 					</h1>
-					<h1 style="text-align: center">Les Coupe sans alcool<a style="color: black" data-toggle="modal"
+					<h1 style="text-align: center">
+						Les Coupe sans alcool<a style="color: black" data-toggle="modal"
 							href="#ModalAjoutPlats"><img style="width: 5%"
-							src="${pageContext.request.contextPath}/resources/images/plus.png"></a></h1>
+							src="${pageContext.request.contextPath}/resources/images/plus.png"></a>
+					</h1>
 					<h4 style="text-align: center">
 						<img style="width: 10%"
 							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
@@ -474,9 +474,11 @@
 				<div class="col-sm-12"
 					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
 					<br />
-					<h1 style="text-align: center">Les Coupe avec alcool<a style="color: black" data-toggle="modal"
+					<h1 style="text-align: center">
+						Les Coupe avec alcool<a style="color: black" data-toggle="modal"
 							href="#ModalAjoutPlats"><img style="width: 5%"
-							src="${pageContext.request.contextPath}/resources/images/plus.png"></a></h1>
+							src="${pageContext.request.contextPath}/resources/images/plus.png"></a>
+					</h1>
 					<h4 style="text-align: center">
 						<img style="width: 10%"
 							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
@@ -512,9 +514,11 @@
 				<div class="col-sm-12"
 					style="border-style: inset; border-color: black; border-top: none">
 					<br />
-					<h1 style="text-align: center">Composer votre coupe<a style="color: black" data-toggle="modal"
+					<h1 style="text-align: center">
+						Composer votre coupe<a style="color: black" data-toggle="modal"
 							href="#ModalAjoutGlaces"><img style="width: 5%"
-							src="${pageContext.request.contextPath}/resources/images/plus.png"></a></h1>
+							src="${pageContext.request.contextPath}/resources/images/plus.png"></a>
+					</h1>
 					<h4 style="text-align: center">
 						<img style="width: 10%"
 							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
@@ -740,6 +744,395 @@
 					</div>
 
 				</div>
+				<div class="col-sm-12"
+					style="margin-top: 12px; border-style: inset; border-color: black; border-bottom: none">
+					<br />
+					<h1 style="text-align: center; font-size: 300%">
+						Les Boissons<a style="color: black" data-toggle="modal"
+							href="#ModalAjoutBoisson"><img style="width: 5%"
+							src="${pageContext.request.contextPath}/resources/images/plus.png"></a>
+					</h1>
+					<h1 style="text-align: center">
+						<img style="width: 20%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h1>
+					<h1 style="text-align: center">Les Bierres pression</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5">
+								<tr>
+									<td style="text-align: center; width: 43%"></td>
+									<td style="text-align: center; font-size: 140%">25cl</td>
+									<td style="text-align: center; font-size: 140%">50cl</td>
+								</tr>
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeBierreP}">
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixGBoisson${b.id}" value="${b.prixg}" type="hidden">${b.prixg}€
+											</td>
+										</tr>
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Bierres bouteilles</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeBierreB}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Apéritifs</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeApero}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Champagnes</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeChamp}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Whiskies</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeWhiskie}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Bourbons</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeBourbon}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Rhums</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeRhum}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Digestifs</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeDigeo}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Sans alcool</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeSA}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				.
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Eaux</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tr>
+									<td style="text-align: center; width: 43%"></td>
+									<td style="text-align: center; font-size: 140%">50cl</td>
+									<td style="text-align: center; font-size: 140%">1L</td>
+								</tr>
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeEau}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixGBoisson${b.id}" value="${b.prixg}" type="hidden">${b.prixg}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-12"
+					style="border-style: inset; border-color: black; border-top: none">
+					<br />
+					<h1 style="text-align: center">Les Boissons chaudes</h1>
+					<h4 style="text-align: center">
+						<img style="width: 10%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h4>
+					<div class="row">
+						<div class="table table-responsive">
+							<table class="table" style="background-color: #e5e5e5;">
+								<tbody
+									style="width: 100%; background-color: #e5e5e5; font-size: 200%">
+									<c:forEach var="b" items="${listeBoissonChaude}">
+
+										<tr>
+											<td style="text-align: center; width: 43%"><a
+												style="color: black" data-toggle="modal"
+												href="#ModalBoissons" onclick="setIdBoisson(${b.id})"><input
+													id="nomBoisson${b.id}" value="${b.nom}" type="hidden"><input
+													id="catBoisson${b.id}" value="${b.categorie}" type="hidden">${b.nom}</a></td>
+											<td style="text-align: center; font-size: 75%"><input
+												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
+											</td>
+										</tr>
+
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
 			</div>
 
 		</div>
@@ -805,12 +1198,29 @@ function setIdGlaces(id) {
 }
 function setIdVins(id) {
 	var nom=document.getElementById("nomVins"+id).value;
-	var prix =document.getElementById("prixVins"+id).value;
+	var prix =document.getElementById("prixVVins"+id).value;
+	var prix =document.getElementById("prix25Vins"+id).value;
+	var prix =document.getElementById("prix50Vins"+id).value;
+	var prix =document.getElementById("prixBVins"+id).value;
 	var type=document.getElementById("typeVins"+id).value;
 	document.getElementById("idVins").value=id;
 	document.getElementById("idNomVins").value=nom;
-	document.getElementById("idPrixVins").value=prix;
+	document.getElementById("idPrixVVins").value=prix;
+	document.getElementById("idPrix25Vins").value=prix;
+	document.getElementById("idPrix50Vins").value=prix;
+	document.getElementById("idPrixBVins").value=prix;
 	document.getElementById("idType").value=type;
+}
+function setIdBoisson(id) {
+	var nom=document.getElementById("nomBoisson"+id).value;
+	var prixp =document.getElementById("prixPBoisson"+id).value;
+	var prixg =document.getElementById("prixGBoisson"+id).value;
+	var cat=document.getElementById("catBoisson"+id).value;
+	document.getElementById("idBoisson").value=id;
+	document.getElementById("idNomBoisson").value=nom;
+	document.getElementById("idPrixPBoisson").value=prixp;
+	document.getElementById("idPrixGBoisson").value=prixg;
+	document.getElementById("idCatBoisson").value=cat;
 }
 </script>
 
