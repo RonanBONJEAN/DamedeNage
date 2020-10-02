@@ -376,6 +376,10 @@
 													id="catPlats${p.id}" value="${p.categorie}" type="hidden">${p.nom}</a></td>
 											<td style="text-align: left; font-size: 75%"><input
 												id="prixPlats${p.id}" value="${p.prixm}" type="hidden"><br>${p.prixm}0</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteP/${v.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -749,7 +753,7 @@
 					<br />
 					<h1 style="text-align: center; font-size: 300%">
 						Les Boissons<a style="color: black" data-toggle="modal"
-							href="#ModalAjoutBoisson"><img style="width: 5%"
+							href="#ModalAjoutBoissons"><img style="width: 5%"
 							src="${pageContext.request.contextPath}/resources/images/plus.png"></a>
 					</h1>
 					<h1 style="text-align: center">
@@ -785,6 +789,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixGBoisson${b.id}" value="${b.prixg}" type="hidden">${b.prixg}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 									</c:forEach>
 								</tbody>
@@ -818,6 +826,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -851,6 +863,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -884,6 +900,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -917,6 +937,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -950,6 +974,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -983,6 +1011,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -1016,6 +1048,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -1049,6 +1085,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -1058,7 +1098,6 @@
 					</div>
 
 				</div>
-				.
 				<div class="col-sm-12"
 					style="border-style: inset; border-color: black; border-bottom: none; border-top: none">
 					<br />
@@ -1091,6 +1130,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixGBoisson${b.id}" value="${b.prixg}" type="hidden">${b.prixg}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -1124,6 +1167,10 @@
 											<td style="text-align: center; font-size: 75%"><input
 												id="prixPBoisson${b.id}" value="${b.prixp}" type="hidden">${b.prixp}€
 											</td>
+											<td><a
+												href="${pageContext.request.contextPath}/admin/submitDeleteB/${b.id}"><img
+													style="width: 23px"
+													src="${pageContext.request.contextPath}/resources/images/poubelle.png"></a></td>
 										</tr>
 
 									</c:forEach>
@@ -1198,23 +1245,25 @@ function setIdGlaces(id) {
 }
 function setIdVins(id) {
 	var nom=document.getElementById("nomVins"+id).value;
-	var prix =document.getElementById("prixVVins"+id).value;
-	var prix =document.getElementById("prix25Vins"+id).value;
-	var prix =document.getElementById("prix50Vins"+id).value;
-	var prix =document.getElementById("prixBVins"+id).value;
+	var prixv =document.getElementById("prixVVins"+id).value;
+	var prix25 =document.getElementById("prix25Vins"+id).value;
+	var prix50 =document.getElementById("prix50Vins"+id).value;
+	var prixb =document.getElementById("prixBVins"+id).value;
 	var type=document.getElementById("typeVins"+id).value;
 	document.getElementById("idVins").value=id;
 	document.getElementById("idNomVins").value=nom;
-	document.getElementById("idPrixVVins").value=prix;
-	document.getElementById("idPrix25Vins").value=prix;
-	document.getElementById("idPrix50Vins").value=prix;
-	document.getElementById("idPrixBVins").value=prix;
+	document.getElementById("idPrixVVins").value=prixv;
+	document.getElementById("idPrix25Vins").value=prix25;
+	document.getElementById("idPrix50Vins").value=prix50;
+	document.getElementById("idPrixBVins").value=prixb;
 	document.getElementById("idType").value=type;
 }
 function setIdBoisson(id) {
 	var nom=document.getElementById("nomBoisson"+id).value;
 	var prixp =document.getElementById("prixPBoisson"+id).value;
+	if (document.getElementById("prixGBoisson"+id)!=null){
 	var prixg =document.getElementById("prixGBoisson"+id).value;
+	}
 	var cat=document.getElementById("catBoisson"+id).value;
 	document.getElementById("idBoisson").value=id;
 	document.getElementById("idNomBoisson").value=nom;

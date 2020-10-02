@@ -687,11 +687,11 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="idPrixVins50" class="col-sm-2 control-label">Prix
+							<label for="idPrix50Vins" class="col-sm-2 control-label">Prix
 								pichet 50cl</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control"
-									id="idPrixVins50" placeholder="Prix" path="prix50"
+									id="idPrix50Vins" placeholder="Prix" path="prix50"
 									required="required" />
 							</div>
 						</div>
@@ -769,7 +769,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="idPrixVins50" class="col-sm-2 control-label">Prix
+							<label for="idPrix50Vins" class="col-sm-2 control-label">Prix
 								pichet 50cl</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control"
@@ -827,17 +827,17 @@
 
 					<div class="modal-body">
 						<div class="form-group" style="display: none">
-							<label for="idBoissons" class="col-sm-2 control-label">ID</label>
+							<label for="idBoisson" class="col-sm-2 control-label">ID</label>
 							<div class="col-sm-3">
-								<form:input type="text" cssClass="form-control" id="idBoissons"
+								<form:input type="text" cssClass="form-control" id="idBoisson"
 									placeholder="Nom" path="id" required="required" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="idNomBoissons" class="col-sm-2 control-label">Nom</label>
+							<label for="idNomBoisson" class="col-sm-2 control-label">Nom</label>
 							<div class="col-sm-6">
 								<form:input type="text" cssClass="form-control"
-									id="idNomBoissons" placeholder="Nom" path="nom"
+									id="idNomBoisson" placeholder="Nom" path="nom"
 									required="required" />
 							</div>
 						</div>
@@ -847,16 +847,16 @@
 								25cl</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control"
-									id="idPrixPBoissons" placeholder="Prix" path="prixb"
+									id="idPrixPBoisson" placeholder="Prix" path="prixp"
 									required="required" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="idPrixGBoissons" class="col-sm-2 control-label">Prix
+							<label for="idPrixGBoisson" class="col-sm-2 control-label">Prix
 								50cl</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control"
-									id="idPrixGBoissons" placeholder="Prix" path="prixg"
+									id="idPrixGBoisson" placeholder="Prix" path="prixg"
 									required="required" />
 							</div>
 						</div>
@@ -864,17 +864,17 @@
 							<label for="idCatBoisson" class="col-sm-2 control-label">Categorie</label>
 							<div class="col-sm-3" id="idCatBoisson">
 								<form:select path="categorie">
-									<form:option value="Bierres pressions" />
+									<form:option value="Bierres pression" />
 									<form:option value="Bierres bouteille" />
-									<form:option value="Aperitif" />
+									<form:option value="Aperitifs" />
 									<form:option value="Champagne" />
-									<form:option value="Whiskie" />
-									<form:option value="Bourbon" />
-									<form:option value="Rhum" />
-									<form:option value="Digestif" />
+									<form:option value="Whiskies" />
+									<form:option value="Bourbons" />
+									<form:option value="Rhums" />
+									<form:option value="Digestifs" />
 									<form:option value="Sans Alcool" />
-									<form:option value="Eau" />
-									<form:option value="Boisson Chaude" />
+									<form:option value="Eaux" />
+									<form:option value="Boissons Chaudes" />
 								</form:select>
 							</div>
 						</div>
@@ -938,17 +938,17 @@
 							<label for="idCatBoisson" class="col-sm-2 control-label">Categorie</label>
 							<div class="col-sm-3" id="idCatBoisson">
 								<form:select path="categorie">
-									<form:option value="Bierres pressions" />
+									<form:option value="Bierres pression" />
 									<form:option value="Bierres bouteille" />
-									<form:option value="Aperitif" />
+									<form:option value="Aperitifs" />
 									<form:option value="Champagne" />
-									<form:option value="Whiskie" />
-									<form:option value="Bourbon" />
-									<form:option value="Rhum" />
-									<form:option value="Digestif" />
+									<form:option value="Whiskies" />
+									<form:option value="Bourbons" />
+									<form:option value="Rhums" />
+									<form:option value="Digestifs" />
 									<form:option value="Sans Alcool" />
-									<form:option value="Eau" />
-									<form:option value="Boisson Chaude" />
+									<form:option value="Eaux" />
+									<form:option value="Boissons Chaudes" />
 								</form:select>
 							</div>
 						</div>

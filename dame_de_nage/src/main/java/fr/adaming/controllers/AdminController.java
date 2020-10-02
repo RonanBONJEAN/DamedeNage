@@ -87,6 +87,7 @@ public class AdminController {
 		List<Boissons> listeDigeo = new ArrayList<Boissons>();
 		List<Boissons> listeSA = new ArrayList<Boissons>();
 		List<Boissons> listeBoissonChaude = new ArrayList<Boissons>();
+		List<Boissons> listeEau = new ArrayList<Boissons>();
 		for (Boissons b : listeBoisson) {
 			if (b.getCategorie().equalsIgnoreCase("Bierres pression")) {
 				listeBierreP.add(b);
@@ -108,6 +109,8 @@ public class AdminController {
 				listeSA.add(b);
 			} else if (b.getCategorie().equalsIgnoreCase("Boissons Chaudes")) {
 				listeBoissonChaude.add(b);
+			} else if (b.getCategorie().equalsIgnoreCase("Eaux")) {
+				listeEau.add(b);
 			}
 
 		}
@@ -171,6 +174,17 @@ public class AdminController {
 				put("listeCoupeAA", listeCoupeAA);
 				put("listePrixGlace", listePrixGlace);
 				put("listeME", listeME);
+				put("listeBierreP", listeBierreP);
+				put("listeBierreB", listeBierreB);
+				put("listeApero", listeApero);
+				put("listeChamp", listeChamp);
+				put("listeWhiskie", listeWhiskie);
+				put("listeBourbon", listeBourbon);
+				put("listeRhum", listeRhum);
+				put("listeDigeo", listeDigeo);
+				put("listeSA", listeSA);
+				put("listeBoissonChaude", listeBoissonChaude);
+				put("listeEau", listeEau);
 			}
 		};
 		mv.addAllObjects(map);
@@ -421,6 +435,18 @@ public class AdminController {
 		if (vin.getAppelation().contains("Ã")) {
 			vin.setAppelation(vin.getAppelation().replaceAll("Ã", "à"));
 		}
+		if (vin.getPrixv().contains("â¬")) {
+			vin.setPrixv(vin.getPrixv().replaceAll("â¬", "€"));
+		}
+		if (vin.getPrix25().contains("â¬")) {
+			vin.setPrix25(vin.getPrix25().replaceAll("â¬", "€"));
+		}
+		if (vin.getPrix50().contains("â¬")) {
+			vin.setPrix50(vin.getPrix50().replaceAll("â¬", "€"));
+		}
+		if (vin.getPrixb().contains("â¬")) {
+			vin.setPrixb(vin.getPrixb().replaceAll("â¬", "€"));
+		}
 		boolean isud = vSer.upDateVins(vin);
 		if (isud) {
 			return "redirect:/admin/carte";
@@ -468,7 +494,7 @@ public class AdminController {
 		}
 	}
 
-	@RequestMapping(value = "/submitDeleteB/{vId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/submitDeleteB/{bId}", method = RequestMethod.GET)
 	public String deleteBoissonpost(@PathVariable("bId") int id, RedirectAttributes ra) {
 		Boissons boisson = new Boissons(id);
 		boolean isdel = bSer.deleteBoissons(boisson);
