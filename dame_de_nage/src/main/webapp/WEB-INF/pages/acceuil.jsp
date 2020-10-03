@@ -45,19 +45,19 @@
 
 						<div class="item active">
 							<img style="width: 100%; height: 452px; border-radius:10px"
-								src="${pageContext.request.contextPath}/resources/images/bar.jpg" />
+								src="${imageSlider1.path}"/>
 						</div>
 
 						<div class="item">
 
 							<img style="width: 100%; height: 452px; border-radius:10px"
-								src="${pageContext.request.contextPath}/resources/images/terrasse-bien-agreable.jpg" />
+								src="${imageSlider2.path}" />
 						</div>
 
 						<div class="item">
 
 							<img style="width: 100%; height: 452px; border-radius:10px"
-								src="${pageContext.request.contextPath}/resources/images/burger1.jpg" />
+								src="${imageSlider3.path}" />
 						</div>
 
 					</div>
@@ -88,9 +88,9 @@
 						U fermé à leur extrémité supérieure par une barrette mobile.</h4>
 
 					<img style="width: 42%; position: relative; left: 10px"
-						src="${pageContext.request.contextPath}/resources/images/Dame_de_nage.jpg">
+						src="${imageArticle1.path}">
 					<img style="width: 53%; position: relative; left: 10px"
-						src="${pageContext.request.contextPath}/resources/images/ddm2.jpg">
+						src="${imageArticle2.path}">
 
 					<br />
 				</div>

@@ -17,10 +17,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import fr.adaming.model.Boissons;
 import fr.adaming.model.Horraires;
+import fr.adaming.model.Images;
 import fr.adaming.model.Plats;
 import fr.adaming.model.Vins;
 import fr.adaming.service.IBoissonsService;
 import fr.adaming.service.IHorrairesService;
+import fr.adaming.service.IImagesService;
 import fr.adaming.service.IPlatsService;
 import fr.adaming.service.IVinsService;
 
@@ -41,14 +43,61 @@ public class AdminController {
 	@Autowired
 	private IBoissonsService bSer;
 	
+	@Autowired
+	private IImagesService iSer;
+	
 	private double prixpGlace;
 	private double prixmGlace;
 	private double prixgGlace;
 
 	@RequestMapping(value = "/acceuil", method = RequestMethod.GET)
 	public ModelAndView afficheAdmin() {
-
-		return new ModelAndView("espaceAdmin");
+		Images imageSlider1= new Images();
+		Images imageSlider2= new Images();
+		Images imageSlider3= new Images();
+		Images imageArticle1= new Images();
+		Images imageArticle2= new Images();
+		Images cropSlider1= new Images();
+		Images cropSlider2= new Images();
+		Images cropSlider3= new Images();
+		Images cropArticle1= new Images();
+		Images cropArticle2= new Images();
+		List<Images> liste =iSer.getAllImages();
+		for (Images i : liste) {
+			if("Slider1".equalsIgnoreCase(i.getName())){
+				imageSlider1=i;
+			} else if("Slider2".equalsIgnoreCase(i.getName())){
+				imageSlider2=i;
+			} else if("Slider3".equalsIgnoreCase(i.getName())){
+				imageSlider3=i;
+			}else if("Article1".equalsIgnoreCase(i.getName())){
+				imageArticle1=i;
+			}else if("Article2".equalsIgnoreCase(i.getName())){
+				imageArticle2=i;
+			}
+			
+		}
+		
+		cropSlider1.setPath(imageSlider1.getPath().substring(31));
+		cropSlider2.setPath(imageSlider2.getPath().substring(31));
+		cropSlider3.setPath(imageSlider3.getPath().substring(31));
+		cropArticle1.setPath(imageArticle1.getPath().substring(31));
+		cropArticle2.setPath(imageArticle2.getPath().substring(31));
+		
+		ModelAndView mv= new ModelAndView();
+		
+		mv.addObject("imageSlider1",imageSlider1);
+		mv.addObject("imageSlider2",imageSlider2);
+		mv.addObject("imageSlider3",imageSlider3);
+		mv.addObject("imageArticle1",imageArticle1);
+		mv.addObject("imageArticle2",imageArticle2);
+		mv.addObject("cropSlider1",cropSlider1);
+		mv.addObject("cropSlider2",cropSlider2);
+		mv.addObject("cropSlider3",cropSlider3);
+		mv.addObject("cropArticle1",cropArticle1);
+		mv.addObject("cropArticle2",cropArticle2);
+		mv.setViewName("espaceAdmin");
+		return mv;
 	}
 
 	@SuppressWarnings("serial")
@@ -559,6 +608,19 @@ public class AdminController {
 		} else {
 			ra.addAttribute("msg", "la modification à fail");
 			return "redirect:/admin/info";
+		}
+	}
+	
+	@RequestMapping(value = "/submitUpDateI", method = RequestMethod.POST)
+	public String upDateImagespost(@ModelAttribute Images image, RedirectAttributes ra) {
+		String beginPath="https://drive.google.com/uc?id=";
+		image.setPath(beginPath.concat(image.getPath()));
+		boolean isud = iSer.upDateImages(image);
+		if (isud) {
+			return "redirect:/admin/acceuil";
+		} else {
+			ra.addAttribute("msg", "la modification à fail");
+			return "redirect:/admin/acceuil";
 		}
 	}
 }

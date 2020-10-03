@@ -35,13 +35,13 @@
 		aria-labelledby="ModalPlats" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h5 class="modal-title" id="ModalPlatsTitle">Formaulaire de
-						Modification</h5>
+					<h2 class="modal-title" id="ModalPlatsTitle">Formulaire de
+						Modification</h2>
 
 				</div>
 				<form:form method="POST" action="submitUpDateP"
@@ -166,13 +166,13 @@
 		aria-labelledby="ModalPlanchas" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h5 class="modal-title" id="ModalPlanchasTitle">Formulaire de
-						Modification</h5>
+					<h2 class="modal-title" id="ModalPlanchasTitle">Formulaire de
+						Modification</h2>
 
 				</div>
 				<form:form method="POST" action="submitUpDateP"
@@ -317,13 +317,13 @@
 		aria-labelledby="ModalSalades" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="ModalSaladesTitle">Formulaire de
-						Modification</h5>
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
+					<h2 class="modal-title" id="ModalSaladesTitle">Formulaire de
+						Modification</h2>
 				</div>
 				<form:form method="POST" action="submitUpDateP"
 					modelAttribute="plats" cssClass="form-horizontal">
@@ -390,13 +390,13 @@
 		role="dialog" aria-labelledby="ModalAjoutSalades" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="ModalAjoutSaladesTitle">Formulaire
-						d'Ajout</h5>
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
+					<h2 class="modal-title" id="ModalAjoutSaladesTitle">Formulaire
+						d'Ajout</h2>
 				</div>
 				<form:form method="POST" action="submitAddP" modelAttribute="plats"
 					cssClass="form-horizontal">
@@ -467,13 +467,13 @@
 		aria-labelledby="ModalGlaces" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="ModalGlacesTitle">Modification des
-						Glaces</h5>
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
+					<h2 class="modal-title" id="ModalGlacesTitle">Modification des
+						Glaces</h2>
 				</div>
 				<form:form method="POST" action="submitUpDateP"
 					modelAttribute="plats" cssClass="form-horizontal">
@@ -519,13 +519,13 @@
 		role="dialog" aria-labelledby="ModalAjoutGlaces" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="ModalAjoutGlacesTitle">Ajout d'une
-						Glace</h5>
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
+					<h2 class="modal-title" id="ModalAjoutGlacesTitle">Ajout d'une
+						Glace</h2>
 				</div>
 				<form:form method="POST" action="submitAddP" modelAttribute="plats"
 					cssClass="form-horizontal">
@@ -566,13 +566,13 @@
 		aria-labelledby="ModalPrixGlaces" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="ModalGlacesTitle">Modification des
-						Prix des Glaces</h5>
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
+					<h2 class="modal-title" id="ModalGlacesTitle">Modification des
+						Prix des Glaces</h2>
 				</div>
 				<form:form method="POST" action="submitUpDateP"
 					modelAttribute="plats" cssClass="form-horizontal">
@@ -642,13 +642,13 @@
 		aria-labelledby="ModalVins" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="ModalVinsTitle">Modification des
-						Vins</h5>
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
+					<h2 class="modal-title" id="ModalVinsTitle">Modification des
+						Vins</h2>
 				</div>
 				<form:form method="POST" action="submitUpDateV"
 					modelAttribute="vins" cssClass="form-horizontal">
@@ -732,13 +732,13 @@
 		aria-labelledby="ModalAjoutVins" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h1 class="modal-title" id="ModalAjoutVinsTitle">Ajout d'un
-						Vins</h1>
+					<h2 class="modal-title" id="ModalAjoutVinsTitle">Ajout d'un
+						Vins</h2>
 				</div>
 				<form:form method="POST" action="submitAddV" modelAttribute="vins"
 					cssClass="form-horizontal">
@@ -814,13 +814,13 @@
 		aria-labelledby="ModalBoissons" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="ModalBoissonsTitle">Modification
-						des Vins</h5>
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
+					<h2 class="modal-title" id="ModalBoissonsTitle">Modification
+						des Vins</h2>
 				</div>
 				<form:form method="POST" action="submitUpDateB"
 					modelAttribute="boissons" cssClass="form-horizontal">
@@ -897,13 +897,13 @@
 		role="dialog" aria-labelledby="ModalAjoutBoissons" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modal-header" style="text-align: center;">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h1 class="modal-title" id="ModalAjoutBoissonsTitle">Ajout
-						d'un Vins</h1>
+					<h2 class="modal-title" id="ModalAjoutBoissonsTitle">Ajout
+						d'un Vins</h2>
 				</div>
 				<form:form method="POST" action="submitAddB"
 					modelAttribute="boissons" cssClass="form-horizontal">

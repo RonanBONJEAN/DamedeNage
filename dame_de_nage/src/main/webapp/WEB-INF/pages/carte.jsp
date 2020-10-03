@@ -32,7 +32,7 @@
 
 	<div style="width: 400px; height: 50px;"></div>
 	<div class="container">
-		<div class="col-md-3"></div>
+		
 		<div class="col-md-6"
 			style="padding: 24px; background-color: #e5e5e5; height: auto; font-family: Brush Script MT">
 			<div class="col-sm-12"
@@ -434,6 +434,13 @@
 					</div>
 
 				</div>
+				</div>
+				</div>
+				<div class="col-md-3"></div>
+				<div class="col-md-6"
+			style="padding: 24px; background-color: #e5e5e5; height: auto; font-family: Brush Script MT">
+				<div class="col-sm-12"
+				style="padding: 12px; border-style: inset; border-width: 6px; border-color: black;">
 				<div class="col-sm-12"
 					style="margin-top: 12px; border-style: inset; border-color: black; border-bottom: none">
 					<br />

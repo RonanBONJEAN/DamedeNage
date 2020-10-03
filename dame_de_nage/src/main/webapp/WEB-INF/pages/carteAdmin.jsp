@@ -33,7 +33,7 @@
 
 	<div style="width: 400px; height: 50px;"></div>
 	<div class="container">
-		<div class="col-md-3"></div>
+
 		<div class="col-md-6"
 			style="padding: 24px; background-color: #e5e5e5; height: auto; font-family: Brush Script MT">
 			<div class="col-sm-12"
@@ -41,6 +41,11 @@
 				<div class="col-sm-12"
 					style="border-style: inset; border-color: black; border-bottom: none">
 					<br />
+					<h1 style="text-align: center; font-size: 300%">La Carte</h1>
+					<h1 style="text-align: center">
+						<img style="width: 20%"
+							src="${pageContext.request.contextPath}/resources/images/underlineVins.jpg">
+					</h1>
 					<h1 style="text-align: center;">
 						Les tapas <a style="color: black" data-toggle="modal"
 							href="#ModalAjoutPlats"><img style="width: 5%"
@@ -570,7 +575,7 @@
 										<tr>
 											<td></td>
 											<td style="text-align: center"><a style="color: black"
-												data-toggle="modal" href="#ModalCoupeAA"
+												data-toggle="modal" href="#ModalGlaces"
 												onclick="setIdGlace(${p.id})"><input
 													id="nomGlace${p.id}" value="${p.nom}" type="hidden">${p.nom}</a><a
 												href="${pageContext.request.contextPath}/admin/submitDeleteP/${p.id}"><img
@@ -588,8 +593,15 @@
 					</div>
 
 				</div>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+		<div class="col-md-6"
+			style="padding: 24px; background-color: #e5e5e5; height: auto; font-family: Brush Script MT">
+			<div class="col-sm-12"
+				style="padding: 12px; border-style: inset; border-width: 6px; border-color: black;">
 				<div class="col-sm-12"
-					style="margin-top: 12px; border-style: inset; border-color: black; border-bottom: none">
+					style="border-style: inset; border-color: black; border-bottom: none">
 					<br />
 					<h1 style="text-align: center; font-size: 300%">
 						Les Vins <a style="color: black" data-toggle="modal"
@@ -1237,8 +1249,8 @@ function setIdPlats(id) {
 	document.getElementById("idCat").value=cat;
 }
 
-function setIdGlaces(id) {
-	var nom=document.getElementById("nomGlaces"+id).value;
+function setIdGlace(id) {
+	var nom=document.getElementById("nomGlace"+id).value;
 	document.getElementById("idGlaces").value=id;
 	document.getElementById("idNomGlaces").value=nom;
 	document.getElementById("idCatGlaces").value='Glace';

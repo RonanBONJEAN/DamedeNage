@@ -14,10 +14,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import fr.adaming.model.Boissons;
 import fr.adaming.model.Horraires;
+import fr.adaming.model.Images;
 import fr.adaming.model.Plats;
 import fr.adaming.model.Vins;
 import fr.adaming.service.IBoissonsService;
 import fr.adaming.service.IHorrairesService;
+import fr.adaming.service.IImagesService;
 import fr.adaming.service.IPlatsService;
 import fr.adaming.service.IVinsService;
 
@@ -37,10 +39,41 @@ public class AcceuilController {
 	
 	@Autowired
 	private IBoissonsService bSer;
+	
+	@Autowired
+	private IImagesService iSer;
 
 	@RequestMapping(value = "/acceuil", method = RequestMethod.GET)
 	public ModelAndView afficheAcceuil() {
-		return new ModelAndView("acceuil");
+		Images imageSlider1= new Images();
+		Images imageSlider2= new Images();
+		Images imageSlider3= new Images();
+		Images imageArticle1= new Images();
+		Images imageArticle2= new Images();
+		List<Images> liste =iSer.getAllImages();
+		for (Images i : liste) {
+			if("Slider1".equalsIgnoreCase(i.getName())){
+				imageSlider1=i;
+			} else if("Slider2".equalsIgnoreCase(i.getName())){
+				imageSlider2=i;
+			} else if("Slider3".equalsIgnoreCase(i.getName())){
+				imageSlider3=i;
+			}else if("Article1".equalsIgnoreCase(i.getName())){
+				imageArticle1=i;
+			}else if("Article2".equalsIgnoreCase(i.getName())){
+				imageArticle2=i;
+			}
+			
+		}
+		ModelAndView mv= new ModelAndView();
+		
+		mv.addObject("imageSlider1",imageSlider1);
+		mv.addObject("imageSlider2",imageSlider2);
+		mv.addObject("imageSlider3",imageSlider3);
+		mv.addObject("imageArticle1",imageArticle1);
+		mv.addObject("imageArticle2",imageArticle2);
+		mv.setViewName("acceuil");
+		return mv;
 	}
 
 	@SuppressWarnings("serial")
