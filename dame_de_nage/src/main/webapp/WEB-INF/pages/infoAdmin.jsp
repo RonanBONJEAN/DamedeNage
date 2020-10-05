@@ -56,7 +56,7 @@
 											soir, premier service à ${h.ouvertureSoir}, deuxième service
 											à ${h.fermetureSoir}.
 										</td>
-										
+
 										<td style="width: 150px"><a data-toggle="modal"
 											href="#ModalHorrairesété" onclick="setIdHorraireété(${h.id})"><input
 												id="houvmid${h.id}" value="${h.ouvertureMidi}" type="hidden"><input
@@ -79,7 +79,8 @@
 											à ${h.fermetureSoir}.
 										</td>
 										<td style="width: 150px"><a data-toggle="modal"
-											href="#ModalHorrairesinter" onclick="setIdHorraireinter(${h.id})"><input
+											href="#ModalHorrairesinter"
+											onclick="setIdHorraireinter(${h.id})"><input
 												id="houvmid${h.id}" value="${h.ouvertureMidi}" type="hidden"><input
 												id="hfermmid${h.id}" value="${h.fermetureMidi}"
 												type="hidden"><input id="houvsoir${h.id}"
@@ -115,6 +116,24 @@
 								</tr>
 
 							</c:forEach>
+							<tr>
+								<c:forEach var="h" items="${Horraires}">
+									<c:if test="${h.saison.equals('hiver')}">
+
+										<td>Fermeture annuelle</td>
+										<td><c:if test="${not empty h.fermeture}">
+												<h3 style="text-align: center; color: #c8101e">du
+													${h.fermeture}</h3>
+											</c:if></td>
+										<td><a data-toggle="modal" href="#ModalFermeture"
+											onclick="setIdFerm(${h.id})" style="text-align: center;"><input
+												id="date${h.id}" value="${h.fermeture}" type="hidden"><img
+												style="width: 30%"
+												src="${pageContext.request.contextPath}/resources/images/modifier.png"></a></td>
+									</c:if>
+
+								</c:forEach>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -122,18 +141,7 @@
 
 		</div>
 		<div class="col-sm-12">
-			<c:forEach var="h" items="${Horraires}">
-				<c:if test="${h.saison.equals('hiver')}">
-						<c:if test="${not empty h.fermeture}">
-						<h3 style="text-align: center; color: #c8101e">Fermeture
-							annuel du ${h.fermeture}</h3>
-					</c:if>
-					<a data-toggle="modal" href="#ModalFermeture"
-						onclick="setIdFerm(${h.id})"style="text-align: center;"><input id="date${h.id}"
-												value="${h.fermeture}" type="hidden"> modfier les dates de fermeture
-						annuelle </a>
-				</c:if>
-			</c:forEach>
+
 			<br />
 
 			<div class="row">
@@ -189,16 +197,16 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="idDate" class="col-sm-6 control-label">date de début
-								de fermeture annuelle</label>
+							<label for="idDate" class="col-sm-6 control-label">date
+								de début de fermeture annuelle</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control" id="idDated"
 									path="fermeture" />
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="idDate" class="col-sm-6 control-label">date de fin
-								de fermeture annuelle</label>
+							<label for="idDate" class="col-sm-6 control-label">date
+								de fin de fermeture annuelle</label>
 							<div class="col-sm-3">
 								<form:input type="text" cssClass="form-control" id="idDatef"
 									path="jourFerme" />

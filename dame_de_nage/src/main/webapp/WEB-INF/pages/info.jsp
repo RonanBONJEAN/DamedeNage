@@ -74,8 +74,20 @@
 											soir de ${h.ouvertureSoir} à ${h.fermetureSoir}.
 										</td>
 									</c:if>
-
 								</tr>
+							</c:forEach>
+							<c:forEach var="h" items="${Horraires}">
+								<c:if test="${h.saison.equals('hiver')}">
+									<c:if test="${not empty h.fermeture}">
+										<tr>
+											<td style="text-align: right">Fermeture annuelle</td>
+											<td>
+												<h3 style="text-align: center; color: #c8101e">du
+													${h.fermeture}</h3>
+											</td>
+										</tr>
+									</c:if>
+								</c:if>
 							</c:forEach>
 						</tbody>
 					</table>
@@ -84,14 +96,7 @@
 
 		</div>
 		<div class="col-sm-12">
-			<c:forEach var="h" items="${Horraires}">
-				<c:if test="${h.saison.equals('hiver')}">
-					<c:if test="${not empty h.fermeture}">
-						<h3 style="text-align: center; color: #c8101e">Fermeture
-							annuel du ${h.fermeture}</h3>
-					</c:if>
-				</c:if>
-			</c:forEach>
+
 			<br />
 
 			<div class="row">
