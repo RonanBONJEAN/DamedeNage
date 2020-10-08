@@ -7,6 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+
 	<!-- factoriser la version des librairies Spring -->
 	<properties>
 		<spring-version>4.3.0.RELEASE</spring-version>
